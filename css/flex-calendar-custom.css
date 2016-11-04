@@ -1,0 +1,11 @@
+.wrapp {
+  width: 450px;
+  height: 75%;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,23 @@
+<section class="bg-primary" id="book">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Check our availability.</h2>
+                <hr class="light">
+                <div ng-app="app">
+                  <div ng-controller="MainController">
+                    <div class="wrapp">
+                      <flex-calendar options="options" events="events"></flex-calendar>
+                      <br>
+                      <div ng-show="show_book_btn">
+                        <span ng-bind="bookDate"></span> is available.<br>
+                        <br>
+                        <a class="btn btn-default btn-xl" target="_blank" ng-click="book(bookDate)">Book now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
