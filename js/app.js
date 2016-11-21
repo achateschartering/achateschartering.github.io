@@ -4,7 +4,7 @@ angular
 
     $scope.show_book_btn = false;
     var now = new Date();
-    var minDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var minDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7);
     var maxDate = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate());
 
     $scope.options = {
