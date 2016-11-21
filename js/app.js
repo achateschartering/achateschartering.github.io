@@ -31,7 +31,7 @@ angular
 
     var updateCalendar = function(){
       $http.jsonp(
-        'https://script.google.com/macros/s/AKfycbyEtP8sDc_16OSp5vUYfrd2zHx9fl_HtsbTPS8HkDo-k3eDrA/exec?'
+        'https://script.google.com/macros/s/AKfycbz6p_PJVAY-8gH1RfsKI-edn0lUDejiTDkc9rj-saOYwShx4Cdq/exec?'
         + 'minDate=' + minDate.getTime()
         + '&maxDate=' + maxDate.getTime()
         + '&callback=JSON_CALLBACK')
