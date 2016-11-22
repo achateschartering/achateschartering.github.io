@@ -18,7 +18,8 @@ angular
       },
       dateClick: function(date) {
         $scope.bookDate = date.day + '/' + date._month + '/' + date.year;
-        $scope.book_btn_href = "https://docs.google.com/a/v-tech.com.sg/forms/d/e/1FAIpQLSf8qVlO3RmcDCp-Zwew5iCm8GkAZf2f6tjGo-ow4BHlY_a82w/viewform?entry.789089950=" + date.year + "-" + date._month + "-" + date.day + "&entry.2055232012&entry.1000020&entry.1000022&entry.1000025&entry.1000023";
+        //$scope.book_btn_href = "https://docs.google.com/a/v-tech.com.sg/forms/d/e/1FAIpQLSf8qVlO3RmcDCp-Zwew5iCm8GkAZf2f6tjGo-ow4BHlY_a82w/viewform?entry.789089950=" + date.year + "-" + date._month + "-" + date.day + "&entry.2055232012&entry.1000020&entry.1000022&entry.1000025&entry.1000023";
+        $scope.book_btn_href = "https://docs.google.com/forms/d/e/1FAIpQLSf8qVlO3RmcDCp-Zwew5iCm8GkAZf2f6tjGo-ow4BHlY_a82w/viewform?entry.789089950=" + date.year + "-" + date._month + "-" + date.day;
         $scope.show_book_btn = true;
       },
       changeMonth: function(month, year) {
