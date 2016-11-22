@@ -1,5 +1,6 @@
 .wrapp {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 75%;
   margin: 0 auto;
   flex-direction: row;
