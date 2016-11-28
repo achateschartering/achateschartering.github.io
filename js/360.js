@@ -1,68 +1,124 @@
 var vrView;
 var scenes={
   aft_deck:{
-    image:'/img/360/aft_deck.jpg',
+    image:'/img/360/aft_deck_min.jpg',
     hotspots:{
       main_deck:{
         pitch:0,
         yaw:0,
         radius:0.05,
         distance:1
+      },
+      flybridge_center:{
+        pitch:20,
+        yaw:50,
+        radius:0.05,
+        distance:1
       }
     }
   },
   main_deck:{
-    image:'/img/360/main_deck.jpg',
+    image:'/img/360/main_deck_min.jpg',
     hotspots:{
       aft_deck:{
         pitch:-10,
         yaw:10,
         radius:0.05,
         distance:1
+      },
+      master_cabin:{
+        pitch:10,
+        yaw:-175,
+        radius:0.05,
+        distance:1
       }
     }
   },
-  whaleRight:{
-    image:'whale-right.jpg',
+  flybridge_center:{
+    image:'/img/360/flybridge_center_min.jpg',
     hotspots:{
-      dolphins:{
-        pitch:0,
-        yaw:305,
+      flybridge_helm:{
+        pitch:-10,
+        yaw:0,
         radius:0.05,
         distance:1
       },
-      whaleLeft:{
+      aft_deck:{
+        pitch:90,
+        yaw:110,
+        radius:0.05,
+        distance:1
+      }
+    }
+  },
+  flybridge_helm:{
+    image:'/img/360/flybridge_helm_min.jpg',
+    hotspots:{
+      flybridge_center:{
         pitch:0,
         yaw:180,
         radius:0.05,
         distance:1
+      }
+    }
+  },
+  master_cabin:{
+    image:'/img/360/master_cabin_min.jpg',
+    hotspots:{
+      main_deck:{
+        pitch:-5,
+        yaw:173,
+        radius:0.05,
+        distance:1
       },
-      walrus:{
-        pitch:0,
-        yaw:210,
+      master_cabin_toilet:{
+        pitch:10,
+        yaw:-150,
+        radius:0.05,
+        distance:1
+      },
+      master_cabin_shower:{
+        pitch:10,
+        yaw:150,
+        radius:0.05,
+        distance:1
+      },
+      aft_cabin:{
+        pitch:10,
+        yaw:180,
         radius:0.05,
         distance:1
       }
     }
   },
-  walrus:{
-    image:'/img/360/livingroom.jpg',
+  master_cabin_shower:{
+    image:'/img/360/master_cabin_shower_min.jpg',
     hotspots:{
-      whaleLeft:{
-        pitch:0,
-        yaw:20,
+      master_cabin:{
+        pitch:-10,
+        yaw:50,
         radius:0.05,
         distance:1
-      },
-      whaleRight:{
-        pitch:0,
-        yaw:340,
+      }
+    }
+  },
+  master_cabin_toilet:{
+    image:'/img/360/master_cabin_toilet_min.jpg',
+    hotspots:{
+      master_cabin:{
+        pitch:-40,
+        yaw:-70,
         radius:0.05,
         distance:1
-      },
-      dolphins:{
-        pitch:0,
-        yaw:320,
+      }
+    }
+  },
+  aft_cabin:{
+    image:'/img/360/aft_cabin_min.jpg',
+    hotspots:{
+      master_cabin:{
+        pitch:-20,
+        yaw:-107,
         radius:0.05,
         distance:1
       }
@@ -76,7 +132,8 @@ function onLoad(){
     {
       image:'/img/blank.png',
       preview:'/img/blank.png',
-      is_stereo:false
+      is_stereo:false,
+      is_autopan_off: false
     }
   );
   vrView.on('ready',onVRViewReady);
@@ -107,7 +164,8 @@ function loadScene(id){
     {
       image:scenes[id].image,
       preview:scenes[id].preview,
-      is_stereo:false
+      is_stereo:false,
+      is_autopan_off: false
     }
   );
 
