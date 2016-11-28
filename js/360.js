@@ -15,8 +15,8 @@ var scenes={
     image:'/img/360/main_deck.jpg',
     hotspots:{
       aft_deck:{
-        pitch:0,
-        yaw:0,
+        pitch:-10,
+        yaw:10,
         radius:0.05,
         distance:1
       }
