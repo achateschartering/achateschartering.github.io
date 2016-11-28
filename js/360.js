@@ -190,4 +190,17 @@ function onVRViewError(e){
   console.log('Error! %s',e.message);
 }
 
+var _imgArray = ["aft_deck", "main_deck", "flybridge_center", "flybridge_helm", "master_cabin", "master_cabin_toilet", "master_cabin_shower", "aft_cabin"];
+function loopImageLoader(i){
+  var image1 = new Image();
+  image1.src = scenes[_imgArray[i]]['image'];
+  image1.onload = function(){
+    i++;
+    if(_imgArray.length != i){
+      loopImageLoader(i);
+    }
+  }
+}
+loopImageLoader(0);
+
 window.addEventListener('load',onLoad);
