@@ -8,7 +8,7 @@ angular
     var maxDate = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate());
 
     $scope.options = {
-      defaultDate: now,
+      defaultDate: minDate,
       minDate: minDate,
       maxDate: maxDate,
       dayNamesLength: 1, // 1 for "M", 2 for "Mo", 3 for "Mon"; 9 will show full day names. Default is 1.
